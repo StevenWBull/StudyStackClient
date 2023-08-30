@@ -8,6 +8,7 @@ const Landing = () => {
             <div>
                 <li>
                     <a href="/login">Login</a>
+                    <a href="/signup">Sign Up</a>
                 </li>
             </div>
         </div>
