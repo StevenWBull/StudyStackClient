@@ -1,7 +1,7 @@
 import React from 'react';
 import './Register.css'; // Import the CSS file
 
-import studyStackLogo from './Study_Stack_Full_Color.png'; // Import your logo image
+import studyStackLogo from '../../Study_Stack_Full_Color.png'; // Import your logo image
 
 const Register = () => {
     return (
@@ -40,7 +40,7 @@ const Register = () => {
                                 id="email"
                                 name="email"
                                 required
-                                placeholder="Email Address"
+                                placeholder="Email address"
                             />
                         </div>
                         <div className="form-group">
@@ -50,7 +50,7 @@ const Register = () => {
                                 id="username"
                                 name="username"
                                 required
-                                placeholder="Email Address"
+                                placeholder="Username"
                             />
                         </div>
                         <div className="form-group">
