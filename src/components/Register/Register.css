@@ -1,0 +1,82 @@
+/* Register.css */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+    background-color: #f2f2f2; /* Background color for the entire page */
+    margin-bottom: 20px; /* Add margin at the bottom */
+  }
+  
+  .center-content {
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%; */
+  }
+  
+  .logo img {
+    max-width: 400px; /* Increase the max-width for a larger logo */
+    margin-bottom: 5px; /* Increased margin for logo */
+  }
+  
+  .register-box {
+    background-color: #ffffff;
+    padding: 30px; /* Increased padding for the register box */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow to the register box */
+  }
+  
+  .register-box h1 {
+    font-size: 22px;
+    margin-bottom: 20px; /* Increased margin for the title */
+    color: #000; /* Text color for the title */
+    font-weight: bold; /* Font family for the title */
+  }
+  
+  .register-box h2 {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 22px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000; /* Text color for labels */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD700; /* Gold color for the button */
+    color: #000; /* Text color for the button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow to the button */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #FFC400; /* Hover background color */
+  }
+  
+  /* Customize the styling as needed */
