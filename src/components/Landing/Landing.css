@@ -1,31 +1,23 @@
 .slidercontent1 {
-  height: 95vh;
   width: 100%;
   background-image: url(../yellow.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
 
 }
 
 .slidercontent2 {
-  height: 95vh;
   background-image: url(../yay.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
 }
 
 .slidercontent3 {
-  height: 95vh;
   background-image: url(../stack.jpg);
+}
+
+.slidercontent1, .slidercontent2, .slidercontent3 {
+  height: 96.5vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-
 }
 
 .wrapText {

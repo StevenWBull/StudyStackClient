@@ -2,7 +2,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Landing.css'; // Import the CSS file
 
-function Landing() {
+const Landing = () => {
     return (
         <Carousel>
             <Carousel.Item>
@@ -44,6 +44,6 @@ function Landing() {
             </Carousel.Item>
         </Carousel>
     );
-}
+};
 
 export default Landing;
