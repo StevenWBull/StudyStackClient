@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import './Landing.css'; // Import the CSS file
 import Footer from '../../Footer/Footer';
 
-function Landing() {
+const Landing = () => {
     return (
         <>
             <Carousel>
@@ -50,6 +50,6 @@ function Landing() {
             <Footer />
         </>
     );
-}
+};
 
 export default Landing;
