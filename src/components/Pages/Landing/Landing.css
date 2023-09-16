@@ -1,0 +1,55 @@
+.slidercontent1 {
+  width: 100%;
+  background-image: url(../../Images/yellow.jpg);
+}
+
+.slidercontent2 {
+  background-image: url(../../Images/yay.jpg);
+}
+
+.slidercontent3 {
+  background-image: url(../../Images/stack.jpg);
+}
+
+.slidercontent1, .slidercontent2, .slidercontent3 {
+  height: 96.5vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.wrapText {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapText h1 {
+  font-weight: bold;
+  font-size: 6em;
+}
+
+.wrapText h2 {
+  font-weight: bolder;
+  color: #333131;
+  font-size: 2em;
+}
+
+.wrapText h3 {
+  font-weight: bolder;
+  color: #f8f6f6;
+  font-size: 3em;
+}
+
+.wrapText h4 {
+  font-weight: bolder;
+  color: #100e0e;
+  font-size: 3em;
+}
+
+
+
+/* font-family: 'Changa',
+sans-serif;
+font-family: 'Roboto Mono',
+monospace; */
