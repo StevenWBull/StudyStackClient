@@ -27,7 +27,7 @@ const Landing = () => {
                             <div className="d-none d-md-block">
                                 <h2>Good to see you again</h2>
                             </div>
-                            <a href="/signup">
+                            <a href="/signin">
                                 <button>Sign in</button>
                             </a>
                         </div>

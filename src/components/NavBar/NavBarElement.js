@@ -51,10 +51,10 @@ function NavBarElement() {
                                     </NavDropdown>
                                     <Nav.Link href="#action4">Peer</Nav.Link>
                                     <NavDropdown
-                                        title="Setting"
+                                        title="Settings"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="#action5">
+                                        <NavDropdown.Item href="/myprofile">
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
