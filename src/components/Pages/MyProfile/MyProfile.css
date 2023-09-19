@@ -1,94 +1,58 @@
 /* MyProfile.css */
 
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f2f2f2;
-  /* Background color for the entire page */
+/* ... (Existing CSS styles) */
+@media (max-width: 767px) {
+  .content-container {
+      margin-bottom: 20px; /* Add margin to the top of the content container */
+  }
+
+  .upload-button {
+    position: absolute;
+    bottom: 50%;
+    transform: translateX(50%);
+    margin-top: 10px; /* Add some margin to separate the button from the image */
+    margin-left: 80px;
+    border: 2px solid black;
+  }
 }
 
-.center-content {
+
+
+.picture-container {
+  width: 150px; /* Set the width and height to your preferred size */
+  height: 150px;
+  background-color: grey; /* Set the background color to grey or any color you prefer */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Hide any overflow content */
+  border: 2px solid #333; /* Add a dark border around the container */
+}
+
+.profile-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.logo-size {
+  width: 400px; /* Set the desired smaller width for the logo */
+}
+
+.yellow-logo-bar {
+  background-color: #ffd700;
+  width: 100%;; /* Lighter grey background color for the logo bar */
   text-align: center;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%; */
+  padding: 15px 0; /* Adjust padding as needed */
+  border-bottom: 2px solid black;
 }
 
-.logo img {
-  max-width: 400px;
-  /* Increase the max-width for a larger logo */
-  margin-bottom: 5px;
-  /* Increased margin for logo */
+.content-container {
+  margin-top: 10px; /* Add margin to the top of the content container */
 }
 
-.register-box {
-  background-color: #ffffff;
-  padding: 30px;
-  /* Increased padding for the register box */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Added box shadow to the register box */
+.second-container {
+  margin-top: 10px; 
 }
 
-.register-box h1 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  /* Increased margin for the title */
-  color: #000;
-  /* Text color for the title */
-  font-weight: bold;
-  /* Font family for the title */
+.second-column-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* You can adjust the shadow settings as needed */
 }
-
-.register-box h2 {
-  font-size: 16px;
-  color: #888;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 22px;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #000;
-  /* Text color for labels */
-}
-
-.form-group input {
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #FFD700;
-  /* Gold color for the button */
-  color: #000;
-  /* Text color for the button */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Added box shadow to the button */
-}
-
-button[type="submit"]:hover {
-  background-color: #FFC400;
-  /* Hover background color */
-}
-
-/* Add any additional styles you need for your MyProfile component */
