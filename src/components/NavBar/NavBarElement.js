@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Logo from '../Images/homeLogo.png';
 
 function NavBarElement() {
     return (
@@ -13,10 +14,19 @@ function NavBarElement() {
                 <Navbar
                     key={expand}
                     expand={expand}
-                    className="bg-body-tertiary mb-3"
+                    className="bg-body-tertiary mb-3 pe-3"
                 >
                     <Container fluid>
-                        <Navbar.Brand href="#">StudyStack</Navbar.Brand>
+                        <Navbar.Brand href="/home">
+                            <img
+                                alt="logo"
+                                src={Logo}
+                                width="30"
+                                height="30x"
+                                className="d-inline-block align-top"
+                            />
+                            StudyStack
+                        </Navbar.Brand>
                         <Navbar.Toggle
                             aria-controls={`offcanvasNavbar-expand-${expand}`}
                         />
@@ -29,11 +39,22 @@ function NavBarElement() {
                                 <Offcanvas.Title
                                     id={`offcanvasNavbarLabel-expand-${expand}`}
                                 >
-                                    Offcanvas
+                                    StudyStack
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
+                                <Nav className="justify-content-end flex-grow-1 pe-2">
+                                    <Form className="d-flex pe-3">
+                                        <Form.Control
+                                            type="search"
+                                            placeholder="Study sets, questions"
+                                            className="me-2"
+                                            aria-label="Search"
+                                        />
+                                        <Button variant="outline-success">
+                                            Search
+                                        </Button>
+                                    </Form>
                                     <NavDropdown
                                         title="Studies"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -54,29 +75,21 @@ function NavBarElement() {
                                         title="Setting"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="#action5">
+                                        <NavDropdown.Item href="/myprofile">
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
                                             Dark mode
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action7">
+                                        <NavDropdown.Item href="#action6">
                                             Log out
                                         </NavDropdown.Item>
                                     </NavDropdown>
+                                    <Nav.Link href="/contactus">
+                                        Contact us
+                                    </Nav.Link>
                                 </Nav>
-                                <Form className="d-flex">
-                                    <Form.Control
-                                        type="search"
-                                        placeholder="Study sets, questions"
-                                        className="me-2"
-                                        aria-label="Search"
-                                    />
-                                    <Button variant="outline-success">
-                                        Search
-                                    </Button>
-                                </Form>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>

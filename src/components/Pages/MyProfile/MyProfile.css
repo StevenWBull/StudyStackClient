@@ -1,0 +1,71 @@
+/* MyProfile.css */
+
+/* ... (Existing CSS styles) */
+@media (max-width: 767px) {
+    .content-container {
+        margin-bottom: 20px;
+        /* Add margin to the top of the content container */
+    }
+
+    .upload-button {
+        position: absolute;
+        bottom: 50%;
+        transform: translateX(50%);
+        margin-top: 10px;
+        /* Add some margin to separate the button from the image */
+        margin-left: 80px;
+        border: 2px solid black;
+    }
+}
+
+
+
+.picture-container {
+    width: 150px;
+    /* Set the width and height to your preferred size */
+    height: 150px;
+    background-color: grey;
+    /* Set the background color to grey or any color you prefer */
+    border-radius: 50%;
+    /* Make it circular */
+    overflow: hidden;
+    /* Hide any overflow content */
+    border: 2px solid #333;
+    /* Add a dark border around the container */
+}
+
+.profile-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.logo-size {
+    width: 400px;
+    /* Set the desired smaller width for the logo */
+}
+
+.yellow-logo-bar {
+    background-color: #ffd700;
+    width: 100%;
+    ;
+    /* Lighter grey background color for the logo bar */
+    text-align: center;
+    padding: 15px 0;
+    /* Adjust padding as needed */
+    border-bottom: 2px solid black;
+}
+
+.content-container {
+    margin-top: 10px;
+    /* Add margin to the top of the content container */
+}
+
+.second-container {
+    margin-top: 10px;
+}
+
+.second-column-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* You can adjust the shadow settings as needed */
+}
