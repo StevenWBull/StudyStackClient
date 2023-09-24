@@ -87,7 +87,7 @@ function NavBarElement() {
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/contactus">
-                                        Contact us
+                                        Contact Us
                                     </Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>
