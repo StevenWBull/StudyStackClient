@@ -76,7 +76,7 @@ const NavBarElement = () => {
                                         title="Setting"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="/myprofile">
+                                        <NavDropdown.Item href="/my-profile">
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
