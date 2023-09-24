@@ -79,7 +79,7 @@ function NavBarElement() {
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
-                                            Dark mode
+                                            Dark Mode
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action6">
