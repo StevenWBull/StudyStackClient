@@ -87,7 +87,7 @@ const NavBarElement = () => {
                                             Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="/contactus">
+                                    <Nav.Link href="/contact-us">
                                         Contact Us
                                     </Nav.Link>
                                 </Nav>
