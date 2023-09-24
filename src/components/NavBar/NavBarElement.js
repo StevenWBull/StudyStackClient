@@ -83,7 +83,7 @@ function NavBarElement() {
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action6">
-                                            Log out
+                                            Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/contactus">
