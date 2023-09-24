@@ -1,4 +1,4 @@
-// SignUp.js
+// SignIn.js
 
 import React from 'react';
 import './SignIn.css'; // Import the CSS file

@@ -98,6 +98,6 @@ const NavBarElement = () => {
             ))}
         </>
     );
-}
+};
 
 export default NavBarElement;
