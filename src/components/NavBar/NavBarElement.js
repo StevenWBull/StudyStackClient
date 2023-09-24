@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../Images/homeLogo.png';
 
-function NavBarElement() {
+const NavBarElement = () => {
     return (
         <>
             {['lg'].map((expand) => (
