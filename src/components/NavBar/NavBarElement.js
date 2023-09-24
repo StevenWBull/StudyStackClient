@@ -25,7 +25,8 @@ function NavBarElement() {
                                 height="30x"
                                 className="d-inline-block align-top"
                             />
-                            StudyStack
+                            {/* &nbsp; is a HTML space */}
+                            &nbsp;StudyStack
                         </Navbar.Brand>
                         <Navbar.Toggle
                             aria-controls={`offcanvasNavbar-expand-${expand}`}
