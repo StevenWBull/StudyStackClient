@@ -5,6 +5,7 @@ import Home from '../Pages/Home';
 import Landing from '../Pages/Landing';
 import MyProfile from '../Pages/MyProfile/MyProfile'; // Import the MyProfile component
 import ContactUs from '../Pages/ContactUs';
+import Create from '../Pages/Create';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path="/home" element={<Home />} />
                     <Route path="/myprofile" element={<MyProfile />} />
                     <Route path="/contactus" element={<ContactUs />} />
+                    <Route path="/create" element={<Create />} />
                 </Routes>
             </Router>
         </>

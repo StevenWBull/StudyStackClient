@@ -66,7 +66,7 @@ function NavBarElement() {
                                             study2
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action3">
+                                        <NavDropdown.Item href="/create">
                                             Add study
                                         </NavDropdown.Item>
                                     </NavDropdown>

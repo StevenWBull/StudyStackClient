@@ -1,4 +1,4 @@
-/* SignUp.css */
+/* SignIn.css */
 
 .signin-container {
   display: flex;
@@ -27,6 +27,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* Added box shadow to the sign-up box */
+  padding-bottom: 0%;
 }
 
 .signin-box h1 {
