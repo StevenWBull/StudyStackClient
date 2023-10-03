@@ -15,7 +15,9 @@ const MyProfile = () => {
     return (
         <>
             <NavBarElement />
-            <div className="main-container">
+            <div className="page-container">
+                {' '}
+                {/* Use .page-container here */}
                 {/* Logo Bar */}
                 <div className="yellow-logo-bar text-center py-3">
                     {/* Make the logo clickable */}
@@ -27,13 +29,12 @@ const MyProfile = () => {
                         />
                     </a>
                 </div>
-
                 {/* Content Containers */}
                 <Container className="content-container">
                     <Row>
                         {/* First Container */}
                         <Col md={6}>
-                            <Card className="content-container register-box height-100">
+                            <Card className="margin-container register-box height-100 mb-2">
                                 <Card.Body>
                                     <div className="text-center mb-3">
                                         {/* Circular container for pictures */}
@@ -91,7 +92,7 @@ const MyProfile = () => {
                                                 name="firstName"
                                                 placeholder="Quizzy"
                                                 className="form-control"
-                                                style={{ marginBottom: '10px' }} // Add margin-bottom for spacing
+                                                style={{ marginBottom: '10px' }}
                                             />
                                             <label htmlFor="lastName">
                                                 Last Name
@@ -102,7 +103,7 @@ const MyProfile = () => {
                                                 name="lastName"
                                                 placeholder="Scholar"
                                                 className="form-control"
-                                                style={{ marginBottom: '10px' }} // Add margin-bottom for spacing
+                                                style={{ marginBottom: '10px' }}
                                             />
                                             <label htmlFor="username">
                                                 Username
@@ -131,8 +132,6 @@ const MyProfile = () => {
                                                 variant="primary"
                                                 className="btn btn-block"
                                                 style={{
-                                                    marginBottom: '25px',
-                                                    marginTop: '5px',
                                                     border: '2px solid black',
                                                 }}
                                             >
@@ -145,7 +144,7 @@ const MyProfile = () => {
                         </Col>
                     </Row>
                 </Container>
-                <Footer style={{ marginTop: '60px' }}></Footer>
+                <Footer></Footer>
             </div>
         </>
     );

@@ -22,7 +22,10 @@
     }
 }
 
-
+.page-container {
+    overflow: hidden;
+    align-items: center;
+}
 
 .picture-container {
     width: 150px;
@@ -36,6 +39,7 @@
     /* Hide any overflow content */
     border: 2px solid #333;
     /* Add a dark border around the container */
+    align-items: center;
 }
 
 .profile-image {
@@ -45,7 +49,7 @@
 }
 
 .logo-size {
-    width: 400px;
+    width: 350px;
     /* Set the desired smaller width for the logo */
 }
 
@@ -57,10 +61,10 @@
     text-align: center;
     padding: 15px 0;
     /* Adjust padding as needed */
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
 }
 
-.content-container {
+.margin-container {
     margin-top: 10px;
     /* Add margin to the top of the content container */
 }
@@ -76,4 +80,20 @@
 
 .height-100 {
   height: 100%;
+}
+
+.content-container {
+    margin-top: 10px;
+    min-height: 70vh;
+}
+
+.Footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    /* Position the footer at the bottom */
+    position: sticky;
+    bottom: 0;
+    /* You can adjust these styles as needed */
 }

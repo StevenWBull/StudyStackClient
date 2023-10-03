@@ -72,7 +72,7 @@ const Register = () => {
                                 placeholder="Confirm password"
                             />
                         </div>
-                        <button type="submit">SUMBIT</button>
+                        <button type="submit">SUBMIT</button>
                     </form>
                 </div>
             </div>
