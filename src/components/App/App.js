@@ -5,6 +5,7 @@ import Home from '../Pages/Home';
 import Landing from '../Pages/Landing';
 import MyProfile from '../Pages/MyProfile/MyProfile'; // Import the MyProfile component
 import ContactUs from '../Pages/ContactUs';
+import Create from '../Pages/Create';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/sign-in" element={<SignIn />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/create" element={<Create />} />
                     <Route path="/my-profile" element={<MyProfile />} />
                     <Route path="/contact-us" element={<ContactUs />} />
                 </Routes>
