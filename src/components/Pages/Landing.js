@@ -22,7 +22,7 @@ const data = [
         bgimage: require('../Images/yay.jpg'),
         caption: 'Make the most of your educational life',
         description: 'Good to see tou again',
-        page: '/signup',
+        page: '/sign-in',
         buttonName: 'Sign in',
         textColor: '2',
     },
@@ -37,7 +37,7 @@ const data = [
     },
 ];
 
-function Landing() {
+const Landing = () => {
     const [index, setIndex] = useState(0);
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
@@ -71,5 +71,6 @@ function Landing() {
             <Footer />
         </>
     );
-}
+};
+
 export default Landing;

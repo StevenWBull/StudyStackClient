@@ -16,6 +16,10 @@
         margin-left: 80px;
         border: 2px solid black;
     }
+
+    .height-100 {
+      height: revert !important;
+    }
 }
 
 
@@ -68,4 +72,8 @@
 .second-column-shadow {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* You can adjust the shadow settings as needed */
+}
+
+.height-100 {
+  height: 100%;
 }

@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../Images/homeLogo.png';
 
-function NavBarElement() {
+const NavBarElement = () => {
     return (
         <>
             {['lg'].map((expand) => (
@@ -25,7 +25,8 @@ function NavBarElement() {
                                 height="30x"
                                 className="d-inline-block align-top"
                             />
-                            StudyStack
+                            {/* &nbsp; is a HTML space */}
+                            &nbsp;StudyStack
                         </Navbar.Brand>
                         <Navbar.Toggle
                             aria-controls={`offcanvasNavbar-expand-${expand}`}
@@ -75,19 +76,19 @@ function NavBarElement() {
                                         title="Setting"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="/myprofile">
+                                        <NavDropdown.Item href="/my-profile">
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
-                                            Dark mode
+                                            Dark Mode
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action6">
-                                            Log out
+                                            Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="/contactus">
-                                        Contact us
+                                    <Nav.Link href="/contact-us">
+                                        Contact Us
                                     </Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>
@@ -97,6 +98,6 @@ function NavBarElement() {
             ))}
         </>
     );
-}
+};
 
 export default NavBarElement;

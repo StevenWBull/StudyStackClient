@@ -21,7 +21,7 @@ const ContactUs = () => {
                         className="mb-4 mt-4"
                         aria-label="Default select example"
                     >
-                        <option>Search your issue</option>
+                        <option>Search Your Issue</option>
                         <option value="1">Account</option>
                         <option value="2">Troubleshooting</option>
                         <option value="3">Community and Safety</option>

@@ -1,3 +1,4 @@
+// SignIn.js
 import React from 'react';
 import './SignIn.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
