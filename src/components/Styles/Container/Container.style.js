@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
     background-color: white;
+    min-height: 88vh;
+    overflow: hidden;
 `;
 
 //header-yellow in main page
@@ -12,6 +12,7 @@ export const HeaderContainer = styled.div`
     width: 100%;
     height: 20%;
     align-items: center;
+    border-bottom: 1px solid black;
 `;
 
 //carousel container

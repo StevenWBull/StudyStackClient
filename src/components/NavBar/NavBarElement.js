@@ -14,19 +14,19 @@ const NavBarElement = () => {
                 <Navbar
                     key={expand}
                     expand={expand}
-                    className="bg-body-tertiary mb-3 pe-3"
+                    className="bg-body-tertiary pe-3"
                 >
                     <Container fluid>
                         <Navbar.Brand href="/home">
                             <img
                                 alt="logo"
                                 src={Logo}
-                                width="30"
-                                height="30x"
-                                className="d-inline-block align-top"
+                                width="40"
+                                height="40x"
+                                className="d-inline-block align-bottom"
                             />
                             {/* &nbsp; is a HTML space */}
-                            &nbsp;StudyStack
+                            &nbsp; StudyStack
                         </Navbar.Brand>
                         <Navbar.Toggle
                             aria-controls={`offcanvasNavbar-expand-${expand}`}
