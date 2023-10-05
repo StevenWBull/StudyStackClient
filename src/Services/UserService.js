@@ -1,39 +1,27 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import axios from 'axios';
-import { useContext } from 'react';
-import { AuthContext } from '../AuthContext';
 
-const API_URL = `${process.env.API_ENDPOINT}/auth`;
+const API_URL = `${process.env.REACT_APP_API_ENDPOINT}/auth`;
 
-const useAuth = () => {
-    const { user, login, logout } = useContext(AuthContext);
-    return { user, login, logout };
-};
-
-const login = async (email, password) => {
-    const response = await axios.post(`${API_ENDPOINT}/login`, {
+const postLogin = async (email, password) => {
+    const response = await axios.post(`${API_URL}/login`, {
         email,
-        password,
+        pword: password,
     });
-    const { first_name, last_name, token } = response.data;
-    const { login } = useAuth();
-    login(email, token);
-    return token;
+    const { token, message } = response.data;
+    return { token, message }; // Return results, let caller decide what to do.
 };
 
-const logout = () => {
-    const { logout } = useAuth();
-    logout();
+const postLogout = async () => {
+    // You might want an endpoint to invalidate tokens or perform other cleanup tasks.
+    // If you add such logic, remember to handle it here.
 };
 
 const getCurrentUser = () => {
-    const user = '';
-    // const { user } = useAuth();
-    return user;
+    return JSON.parse(localStorage.getItem('currentUser'));
 };
 
 export default {
-    login,
-    logout,
+    postLogin,
+    postLogout,
     getCurrentUser,
 };
