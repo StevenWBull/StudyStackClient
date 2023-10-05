@@ -1,10 +1,20 @@
 // SignIn.js
-import React from 'react';
+import React, { useContext } from 'react';
 import './SignIn.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
 import Alert from 'react-bootstrap/Alert';
+import { AuthContext } from '../AuthContext';
 
 const SignIn = () => {
+    const { login } = useContext(AuthContext);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const username = event.target.username.value;
+        const password = event.target.password.value;
+        login(username, password);
+    };
+
     return (
         <>
             <div className="signin-container">
@@ -14,7 +24,7 @@ const SignIn = () => {
                     </div>
                     <div className="signin-box">
                         <h1>Sign In</h1>
-                        <form className="center-form">
+                        <form className="center-form" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="username">Username</label>
                                 <input
@@ -51,5 +61,3 @@ const SignIn = () => {
         </>
     );
 };
-
-export default SignIn;
