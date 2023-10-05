@@ -3,16 +3,12 @@ import React, { useContext } from 'react';
 import './SignIn.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
 import Alert from 'react-bootstrap/Alert';
-import { AuthContext } from '../AuthContext';
 
 const SignIn = () => {
-    const { login } = useContext(AuthContext);
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const username = event.target.username.value;
         const password = event.target.password.value;
-        login(username, password);
     };
 
     return (
@@ -61,3 +57,5 @@ const SignIn = () => {
         </>
     );
 };
+
+export default SignIn;

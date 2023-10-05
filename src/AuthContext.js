@@ -1,32 +1,41 @@
-// AuthContext.js
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
+
+const AuthContext = createContext();
+
+export const useAuth = () => {
+    return useContext(AuthContext);
+};
+
 import PropTypes from 'prop-types';
 
-export const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(() => {
+        // Retrieve from local storage on initial load
+        return JSON.parse(localStorage.getItem('currentUser'));
+        // return 'Steven';
+    });
 
-    const login = (first_name, last_name, email, token) => {
-        // Your login logic here
-        setUser({ email, token });
+    const login = (user) => {
+        setCurrentUser(user);
+        localStorage.setItem('currentUser', JSON.stringify(user)); // Store to local storage
     };
 
     const logout = () => {
-        // Your logout logic here
-        setUser(null);
+        setCurrentUser(null);
+        localStorage.removeItem('currentUser'); // Remove from local storage
+    };
+
+    const getUser = () => {
+        return currentUser;
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, logout }}>
+        <AuthContext.Provider value={{ currentUser, login, logout }}>
             {children}
         </AuthContext.Provider>
     );
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]).isRequired,
+    children: PropTypes.node.isRequired,
 };
