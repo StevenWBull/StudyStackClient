@@ -6,8 +6,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../Images/homeLogo.png';
+import { useAuth } from '../../AuthContext';
 
 const NavBarElement = () => {
+    const { logout } = useAuth();
     return (
         <>
             {['lg'].map((expand) => (
@@ -83,7 +85,7 @@ const NavBarElement = () => {
                                             Dark Mode
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action6">
+                                        <NavDropdown.Item onClick={logout}>
                                             Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
