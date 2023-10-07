@@ -1,10 +1,38 @@
 // SignIn.js
-import React from 'react';
+import React, { useContext } from 'react';
 import './SignIn.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
 import Alert from 'react-bootstrap/Alert';
+import UserService from '../../../Services/UserService';
+import { useAuth } from '../../../AuthContext';
+import useSweetAlert from '../../../hooks/useSweetAlert';
 
 const SignIn = () => {
+    const { showAlert } = useSweetAlert();
+    const { login } = useAuth();
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        try {
+            const { message, token } = await UserService.postLogin(
+                email,
+                password
+            );
+            login({ email, token });
+            console.log(token, message);
+        } catch (error) {
+            const options = {
+                icon: 'error',
+                title: 'Error',
+                text: error.message,
+            };
+            showAlert(options);
+        }
+    };
+
     return (
         <>
             <div className="signin-container">
@@ -14,15 +42,15 @@ const SignIn = () => {
                     </div>
                     <div className="signin-box">
                         <h1>Sign In</h1>
-                        <form className="center-form">
+                        <form className="center-form" onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="username">Username</label>
+                                <label htmlFor="email">Email</label>
                                 <input
                                     type="text"
-                                    id="username"
-                                    name="username"
+                                    id="email"
+                                    name="email"
                                     required
-                                    placeholder="Enter your username"
+                                    placeholder="Enter your Email"
                                 />
                             </div>
                             <div className="form-group">
