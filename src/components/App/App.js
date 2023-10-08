@@ -6,6 +6,10 @@ import Landing from '../Pages/Landing';
 import MyProfile from '../Pages/MyProfile/MyProfile'; // Import the MyProfile component
 import ContactUs from '../Pages/ContactUs';
 import Create from '../Pages/Create';
+import CopyrigthsNotice from '../Footer/CopyrigthsNotice/CopyrigthsNotice';
+import TermsOfServices from '../Footer/TermsOfServices/TermsOfServices';
+import PrivacyPolicy from '../Footer/PrivacyPolicy/PrivacyPolicy'; 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -20,6 +24,9 @@ const App = () => {
                     <Route path="/create" element={<Create />} />
                     <Route path="/my-profile" element={<MyProfile />} />
                     <Route path="/contact-us" element={<ContactUs />} />
+                    <Route path="/Copyrights-Notice" element={<CopyrigthsNotice />} />
+                    <Route path="/Terms-Of-Services" element={<TermsOfServices />} />
+                    <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
                 </Routes>
             </Router>
         </>
