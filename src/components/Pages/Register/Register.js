@@ -1,8 +1,47 @@
 import React from 'react';
 import './Register.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
+import UserService from '../../../Services/UserService';
+import { useAuth } from '../../../AuthContext';
+import useSweetAlert from '../../../hooks/useSweetAlert';
 
 const Register = () => {
+    const { showAlert } = useSweetAlert();
+    const { login } = useAuth();
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const { email, password, confirmPassword, firstName, lastName } =
+            event.target;
+
+        if (password.value !== confirmPassword.value) {
+            const options = {
+                icon: 'error',
+                title: 'Error',
+                text: 'Passwords Do Not Match!',
+            };
+            showAlert(options);
+            return;
+        }
+
+        try {
+            const { message, token } = await UserService.postRegister(
+                email.value,
+                password.value,
+                firstName.value,
+                lastName.value
+            );
+            login({ email, token });
+        } catch (error) {
+            const options = {
+                icon: 'error',
+                title: 'Error',
+                text: error.message,
+            };
+            showAlert(options);
+        }
+    };
+
     return (
         <div className="register-container">
             <div className="center-content">
@@ -11,7 +50,7 @@ const Register = () => {
                 </div>
                 <div className="register-box">
                     <h1>Registration</h1>
-                    <form className="center-form">
+                    <form className="center-form" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label>
                             <input
@@ -42,7 +81,7 @@ const Register = () => {
                                 placeholder="Email address"
                             />
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="username">Username</label>
                             <input
                                 type="text"
@@ -51,11 +90,11 @@ const Register = () => {
                                 required
                                 placeholder="Username"
                             />
-                        </div>
+                        </div> */}
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
                             <input
-                                type="text"
+                                type="password"
                                 id="password"
                                 name="password"
                                 required
@@ -63,16 +102,18 @@ const Register = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="password">Confirm Password</label>
+                            <label htmlFor="confirmPassword">
+                                Confirm Password
+                            </label>
                             <input
-                                type="text"
-                                id="password"
-                                name="password"
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
                                 required
                                 placeholder="Confirm password"
                             />
                         </div>
-                        <button type="submit">SUBMIT</button>
+                        <button type="submit">Create Account</button>
                     </form>
                 </div>
             </div>

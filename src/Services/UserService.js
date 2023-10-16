@@ -11,6 +11,17 @@ const postLogin = async (email, password) => {
     return { token, message }; // Return results, let caller decide what to do.
 };
 
+const postRegister = async (email, password, firstName, lastName) => {
+    const response = await axios.post(`${API_URL}/register`, {
+        email,
+        pword: password,
+        firstName,
+        lastName,
+    });
+    const { token, message } = response.data;
+    return { token, message }; // Return results, let caller decide what to do.
+};
+
 const postLogout = async () => {
     // You might want an endpoint to invalidate tokens or perform other cleanup tasks.
     // If you add such logic, remember to handle it here.
@@ -22,6 +33,7 @@ const getCurrentUser = () => {
 
 export default {
     postLogin,
+    postRegister,
     postLogout,
     getCurrentUser,
 };
