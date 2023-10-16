@@ -31,12 +31,15 @@ const Register = () => {
                 firstName.value,
                 lastName.value
             );
-            login({ email, token });
+            login({ email: email.value, token });
         } catch (error) {
+            console.log(error);
             const options = {
                 icon: 'error',
                 title: 'Error',
-                text: error.message,
+                text: error?.response
+                    ? error.message.data.message
+                    : error.message,
             };
             showAlert(options);
         }

@@ -15,8 +15,8 @@ const postRegister = async (email, password, firstName, lastName) => {
     const response = await axios.post(`${API_URL}/register`, {
         email,
         pword: password,
-        firstName,
-        lastName,
+        first_name: firstName,
+        last_name: lastName,
     });
     const { token, message } = response.data;
     return { token, message }; // Return results, let caller decide what to do.
