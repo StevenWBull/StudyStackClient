@@ -27,7 +27,9 @@ const SignIn = () => {
             const options = {
                 icon: 'error',
                 title: 'Error',
-                text: error.response.data.message,
+                text: error?.response
+                    ? error.message.data.message
+                    : error.message,
             };
             showAlert(options);
         }
