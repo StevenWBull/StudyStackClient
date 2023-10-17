@@ -9,7 +9,8 @@ import Logo from '../Images/homeLogo.png';
 import { useAuth } from '../../AuthContext';
 
 const NavBarElement = () => {
-    const { logout } = useAuth();
+    const { currentUser, logout } = useAuth();
+    const username = currentUser.email.split('@')[0]; //username
     return (
         <>
             {['lg'].map((expand) => (
@@ -50,7 +51,7 @@ const NavBarElement = () => {
                                     <Form className="d-flex pe-3">
                                         <Form.Control
                                             type="search"
-                                            placeholder="Study sets, questions"
+                                            placeholder="category or stack"
                                             className="me-2"
                                             aria-label="Search"
                                         />
@@ -73,9 +74,8 @@ const NavBarElement = () => {
                                             Add study
                                         </NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="#action4">Peer</Nav.Link>
                                     <NavDropdown
-                                        title="Setting"
+                                        title={`Welcome! ${username}`}
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
                                         <NavDropdown.Item href="/my-profile">

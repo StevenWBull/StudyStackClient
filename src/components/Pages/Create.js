@@ -5,7 +5,8 @@ import {
     Container,
     StudyContainer,
 } from '../Styles/Container/Container.style';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, InputGroup } from 'react-bootstrap';
+import { FaPlus, FaTrash } from 'react-icons/fa';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -31,10 +32,21 @@ const Create = () => {
         setQuestionAnswers(initialQuestionAnswers);
     };
 
-    const handleQuestionAnswerChange = (index, field, value) => {
+    const handleQuestionAnswerChange = (i, field, value) => {
         // Update the questionAnswers array when a question or answer is changed
         const updatedQuestionAnswers = [...questionAnswers];
-        updatedQuestionAnswers[index][field] = value;
+        updatedQuestionAnswers[i][field] = value;
+        setQuestionAnswers(updatedQuestionAnswers);
+    };
+    const handleDeleteQuestion = (i) => {
+        // Delete the question and answer at the specified i
+        const updatedQuestionAnswers = [...questionAnswers];
+        updatedQuestionAnswers.splice(i, 1);
+        setQuestionAnswers(updatedQuestionAnswers);
+    };
+    const handleAddQuestion = () => {
+        const updatedQuestionAnswers = [...questionAnswers];
+        updatedQuestionAnswers.push({ question: '', answer: '' });
         setQuestionAnswers(updatedQuestionAnswers);
     };
 
@@ -42,7 +54,7 @@ const Create = () => {
         <>
             <NavBarElement />
             <Container>
-                <HeaderContainer />
+                <HeaderContainer></HeaderContainer>
                 <StudyContainer>
                     <h4>Create a New Study Stack</h4>
                     <Form>
@@ -51,7 +63,17 @@ const Create = () => {
                             <Form.Control
                                 className="mb-2"
                                 type="text"
-                                placeholder="Enter title"
+                                placeholder="Type your major category, for example, CS"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="title">
+                            {/* <Form.Label>Title</Form.Label> */}
+                            <Form.Control
+                                className="mb-2"
+                                type="text"
+                                placeholder="Type the name of stack, for example, Software Engineering"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                             />
@@ -62,7 +84,7 @@ const Create = () => {
                                 className="mb-5"
                                 as="textarea"
                                 rows={3}
-                                placeholder="Enter description"
+                                placeholder="Enter description of your stack"
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                             />
@@ -71,33 +93,46 @@ const Create = () => {
                             <Form.Label>
                                 Question and Answer (One per line)
                             </Form.Label>
-                            {questionAnswers.map((qa, index) => (
-                                <div key={index}>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder={`Question 
-                                            ${index + 1}`}
-                                        value={qa.question}
-                                        onChange={(e) =>
-                                            handleQuestionAnswerChange(
-                                                index,
-                                                'question',
-                                                e.target.value
-                                            )
-                                        }
-                                        style={{
-                                            flex: '1',
-                                            marginRight: '5px',
-                                        }}
-                                    />
+                            {questionAnswers.map((qa, i) => (
+                                <div key={i}>
+                                    <InputGroup>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder={`Question ${i + 1}`}
+                                            value={qa.question}
+                                            onChange={(e) =>
+                                                handleQuestionAnswerChange(
+                                                    i,
+                                                    'question',
+                                                    e.target.value
+                                                )
+                                            }
+                                            style={{
+                                                flex: '1',
+                                                marginRight: '5px',
+                                            }}
+                                        />
+                                        <Button
+                                            variant="outline-warning"
+                                            onClick={handleAddQuestion}
+                                        >
+                                            <FaPlus /> {/* add icon */}
+                                        </Button>
+                                        <Button
+                                            variant="outline-warning"
+                                            onClick={handleDeleteQuestion}
+                                        >
+                                            <FaTrash /> {/* Delete icon */}
+                                        </Button>
+                                    </InputGroup>
                                     <Form.Control
                                         className="mb-2"
                                         type="text"
-                                        placeholder={`Answer ${index + 1}`}
+                                        placeholder={`Answer ${i + 1}`}
                                         value={qa.answer}
                                         onChange={(e) =>
                                             handleQuestionAnswerChange(
-                                                index,
+                                                i,
                                                 'answer',
                                                 e.target.value
                                             )
