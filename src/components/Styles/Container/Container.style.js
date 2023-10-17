@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div`
     height: 20%;
     align-items: center;
     border-bottom: 1px solid black;
+    min-height: 120px;
 `;
 
 //carousel container

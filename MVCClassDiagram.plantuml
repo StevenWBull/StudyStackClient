@@ -1,0 +1,157 @@
+@startuml
+title: MVC Class Diagram
+
+class App {
+  +render(): void
+}
+
+class AuthProvider {
+  +render(): void
+}
+
+class SignIn {
+  +render(): void
+}
+
+class Register {
+  +render(): void
+}
+
+class Home {
+  +render(): void
+}
+
+class Landing {
+  +render(): void
+}
+
+class MyProfile {
+  +render(): void
+}
+
+class ContactUs {
+  +render(): void
+}
+
+class Create {
+  +render(): void
+}
+
+class RequireAuth {
+  +render(): void
+}
+
+class RedirectIfAuthenticated {
+  +render(): void
+}
+
+class NavBar {
+  +render(): void
+}
+
+class Cards {
+  +render(): void
+}
+
+class Tabs {
+  +render(): void
+}
+
+class Footer {
+  +render(): void
+}
+
+class Carousel {
+  +render(): void
+}
+
+class Button {
+  +render(): void
+}
+
+class GlobalStyle {
+  +render(): void
+}
+
+class FontStyle {
+  +render(): void
+}
+
+class ContainerStyle {
+  +render(): void
+}
+
+class AuthContext {
+  +render(): void
+}
+
+class StudyCards {
+  +render(): void
+}
+
+class CarouselElement {
+  +render(): void
+}
+
+class TextColor {
+  +render(): void
+}
+
+App --> AuthProvider
+App --> GlobalStyle
+App --> NavBar
+App --> Cards
+App --> Tabs
+App --> Footer
+
+AuthProvider --> AuthContext
+
+NavBar --> SignIn
+NavBar --> Register
+
+Cards --> StudyCards
+
+Tabs --> Home
+
+Home --> NavBar
+Home --> Container
+Home --> HeaderContainer
+Home --> Tabs
+Home --> StudyCards
+Home --> Footer
+
+Landing --> Carousel
+Landing --> Footer
+
+MyProfile --> NavBar
+MyProfile --> Container
+MyProfile --> Footer
+
+ContactUs --> NavBar
+ContactUs --> Container
+ContactUs --> Footer
+
+Create --> NavBar
+Create --> Container
+Create --> Footer
+
+RequireAuth --> Home
+RequireAuth --> Create
+RequireAuth --> MyProfile
+
+RedirectIfAuthenticated --> SignIn
+RedirectIfAuthenticated --> Register
+
+Carousel --> CarouselElement
+Carousel --> Button
+
+GlobalStyle --> FontStyle
+
+ContainerStyle --> Container
+
+StudyCards --> NavBar
+StudyCards --> Container
+StudyCards --> Footer
+
+CarouselElement --> TextColor
+@enduml

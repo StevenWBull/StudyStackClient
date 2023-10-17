@@ -21,7 +21,7 @@ const data = [
         //2nd slide
         bgimage: require('../Images/yay.jpg'),
         caption: 'Make the most of your educational life',
-        description: 'Good to see tou again',
+        description: 'Good to see you again',
         page: '/sign-in',
         buttonName: 'Sign in',
         textColor: '2',

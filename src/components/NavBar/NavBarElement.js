@@ -9,7 +9,8 @@ import Logo from '../Images/homeLogo.png';
 import { useAuth } from '../../AuthContext';
 
 const NavBarElement = () => {
-    const { logout } = useAuth();
+    const { currentUser, logout } = useAuth();
+    const username = currentUser.email.split('@')[0]; //username
     return (
         <>
             {['lg'].map((expand) => (
@@ -50,7 +51,7 @@ const NavBarElement = () => {
                                     <Form className="d-flex pe-3">
                                         <Form.Control
                                             type="search"
-                                            placeholder="Study sets, questions"
+                                            placeholder="category or stack"
                                             className="me-2"
                                             aria-label="Search"
                                         />
@@ -58,6 +59,21 @@ const NavBarElement = () => {
                                             Search
                                         </Button>
                                     </Form>
+                                    <NavDropdown
+                                        title={`Welcome! ${username}`}
+                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                    >
+                                        <NavDropdown.Item href="/my-profile">
+                                            My Profile
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="#action6">
+                                            Dark Mode
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item onClick={logout}>
+                                            Log Out
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
                                     <NavDropdown
                                         title="Studies"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -71,22 +87,6 @@ const NavBarElement = () => {
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="/create">
                                             Add study
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <Nav.Link href="#action4">Peer</Nav.Link>
-                                    <NavDropdown
-                                        title="Setting"
-                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
-                                    >
-                                        <NavDropdown.Item href="/my-profile">
-                                            My Profile
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action6">
-                                            Dark Mode
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item onClick={logout}>
-                                            Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/contact-us">
