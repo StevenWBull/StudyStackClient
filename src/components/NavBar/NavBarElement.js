@@ -60,21 +60,6 @@ const NavBarElement = () => {
                                         </Button>
                                     </Form>
                                     <NavDropdown
-                                        title="Studies"
-                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
-                                    >
-                                        <NavDropdown.Item href="#action1">
-                                            study1
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action2">
-                                            study2
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="/create">
-                                            Add study
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <NavDropdown
                                         title={`Welcome! ${username}`}
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
@@ -87,6 +72,21 @@ const NavBarElement = () => {
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item onClick={logout}>
                                             Log Out
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
+                                    <NavDropdown
+                                        title="Studies"
+                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                    >
+                                        <NavDropdown.Item href="#action1">
+                                            study1
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="#action2">
+                                            study2
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="/create">
+                                            Add study
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/contact-us">
