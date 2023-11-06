@@ -25,7 +25,7 @@ const Register = () => {
         }
 
         try {
-            const { token } = await UserService.postRegister(
+            const { message, token } = await UserService.postRegister(
                 email.value,
                 password.value,
                 firstName.value,
