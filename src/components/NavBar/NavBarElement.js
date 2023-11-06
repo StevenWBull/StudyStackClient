@@ -9,8 +9,9 @@ import Logo from '../Images/homeLogo.png';
 import { useAuth } from '../../AuthContext';
 
 const NavBarElement = () => {
-    const { currentUser, logout } = useAuth();
-    const username = currentUser.firstName;
+    const { getUserData, logout } = useAuth();
+    const username = getUserData().firstName;
+
     return (
         <>
             {['lg'].map((expand) => (

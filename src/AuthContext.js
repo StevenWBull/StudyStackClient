@@ -10,10 +10,15 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(() => {
-        const userToken = JSON.parse(localStorage.getItem('currentUser')).token;
-        const jwtPayload = jwtDecode(userToken);
-        return jwtPayload;
+        return JSON.parse(localStorage.getItem('currentUser'));
     });
+
+    const getUserData = () => {
+        const userToken = currentUser.token;
+        const jwtPayload = jwtDecode(userToken);
+        console.log(jwtPayload);
+        return jwtPayload;
+    };
 
     const login = (user) => {
         setCurrentUser(user);
@@ -26,7 +31,9 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ currentUser, login, logout }}>
+        <AuthContext.Provider
+            value={{ currentUser, getUserData, login, logout }}
+        >
             {children}
         </AuthContext.Provider>
     );
