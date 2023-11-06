@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBarElement from '../../NavBar/NavBarElement';
 import StudyCards from '../../Cards/StudyCards';
 import TapElement from '../../Tap/TapElement';
@@ -8,10 +8,35 @@ import {
     HeaderContainer,
     Container,
 } from '../../Styles/Container/Container.style';
+import CategoryService from '../../../Services/CategoryService';
+import { useAuth } from '../../../AuthContext';
 
 import Logo from '../../Images/Study_Stack_Black.png'; // Import the image
 
 const Home = () => {
+    const [categories, setCategories] = useState([]);
+    const { getUserData, currentUser } = useAuth();
+    const token = currentUser.token;
+    const userId = getUserData().id;
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                console.log('Fetching categories...');
+                const categoryData = await CategoryService.GetCategoryList(
+                    token,
+                    userId
+                ); // Make sure this function is async or handles the promise correctly
+                setCategories(categoryData?.categories); // Update state with fetched categories
+            } catch (error) {
+                console.error('Failed to fetch categories:', error);
+                // Handle error appropriately
+            }
+        };
+        fetchCategories();
+    }, [token, userId]);
+
+    console.log(categories);
+
     return (
         <>
             <NavBarElement />
