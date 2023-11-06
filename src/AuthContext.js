@@ -14,9 +14,20 @@ export const AuthProvider = ({ children }) => {
     });
 
     const getUserData = () => {
+        /* 
+            This function will return the user data from the JWT token.
+            The available data is:
+            {
+                "id": 1,
+                "email": "no@email.com",
+                "iat": 1626950000,
+                "exp": 1626953600,
+                "firstName": "John",
+                "lastName": "Doe"
+            }
+        */
         const userToken = currentUser.token;
         const jwtPayload = jwtDecode(userToken);
-        console.log(jwtPayload);
         return jwtPayload;
     };
 
