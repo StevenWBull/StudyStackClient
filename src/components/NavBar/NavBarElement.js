@@ -10,7 +10,7 @@ import { useAuth } from '../../AuthContext';
 
 const NavBarElement = () => {
     const { currentUser, logout } = useAuth();
-    const username = currentUser.email.split('@')[0]; //username
+    const username = currentUser.firstName;
     return (
         <>
             {['lg'].map((expand) => (
@@ -60,7 +60,7 @@ const NavBarElement = () => {
                                         </Button>
                                     </Form>
                                     <NavDropdown
-                                        title={`Welcome! ${username}`}
+                                        title={`Welcome ${username}!`}
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
                                         <NavDropdown.Item href="/my-profile">
