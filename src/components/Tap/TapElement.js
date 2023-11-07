@@ -1,24 +1,34 @@
+import React from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import PropTypes from 'prop-types';
 
-function TapElement() {
+function TapElement({ categories }) {
+    if (!categories) {
+        categories = []; // Initialize categories as an empty array if it's undefined
+    }
+
     return (
-        <Tabs
-            defaultActiveKey="profile"
-            id="uncontrolled-tab-example"
-            className="mb-3"
-        >
+        <Tabs defaultActiveKey="all" id="category-tabs" className="mb-3">
             <Tab eventKey="all" title="All">
-                Tab content for Home
+                Click on the desired category tab to view cards corresponding to
+                that category. Currently no registered categories.
             </Tab>
-            <Tab eventKey="study1" title="Study1">
-                Tab content for Profile
-            </Tab>
-            <Tab eventKey="study2" title="Study2">
-                Tab content for Contact
-            </Tab>
+            {categories.map((category) => (
+                <Tab
+                    key={category.id}
+                    eventKey={category.id}
+                    title={category.name}
+                >
+                    Tab content for {category.name}
+                </Tab>
+            ))}
         </Tabs>
     );
 }
+
+TapElement.propTypes = {
+    categories: PropTypes.array.isRequired, // categories should be an array
+};
 
 export default TapElement;

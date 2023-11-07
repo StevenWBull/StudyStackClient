@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import NavBarElement from '../../NavBar/NavBarElement';
-import StudyCards from '../../Cards/StudyCards';
 import TapElement from '../../Tap/TapElement';
 import Footer from '../../Footer/Footer';
 import '../../Footer/Footer.css';
@@ -52,9 +51,8 @@ const Home = () => {
                     </div>
                 </HeaderContainer>
                 {/* Category Tab */}
-                <TapElement />
+                <TapElement categories={categories} />
                 {/* Post Cards */}
-                <StudyCards />
             </Container>
             <Footer></Footer>
         </>
