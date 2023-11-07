@@ -16,11 +16,11 @@ function TapElement({ categories }) {
             </Tab>
             {categories.map((category) => (
                 <Tab
-                    key={category.id}
-                    eventKey={category.id}
-                    title={category.name}
+                    key={category._id}
+                    eventKey={category._id}
+                    title={category.title}
                 >
-                    Tab content for {category.name}
+                    Tab content for {category.title}
                 </Tab>
             ))}
         </Tabs>
