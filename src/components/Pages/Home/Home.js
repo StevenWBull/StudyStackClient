@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBarElement from '../../NavBar/NavBarElement';
 import TapElement from '../../Tap/TapElement';
+import StudyCards from '../../Cards/Stacks';
 import Footer from '../../Footer/Footer';
 import '../../Footer/Footer.css';
 import {
@@ -14,6 +15,7 @@ import Logo from '../../Images/Study_Stack_Black.png'; // Import the image
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);
     const { getUserData, currentUser } = useAuth();
     const token = currentUser.token;
     const userId = getUserData().id;
@@ -51,8 +53,15 @@ const Home = () => {
                     </div>
                 </HeaderContainer>
                 {/* Category Tab */}
-                <TapElement categories={categories} />
+                <TapElement
+                    categories={categories}
+                    onCategorySelect={setSelectedCategory}
+                />
                 {/* Post Cards */}
+                <StudyCards
+                    categories={categories}
+                    selectedCategory={selectedCategory}
+                />
             </Container>
             <Footer></Footer>
         </>
