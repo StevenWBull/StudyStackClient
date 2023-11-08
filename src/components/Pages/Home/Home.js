@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBarElement from '../../NavBar/NavBarElement';
 import TapElement from '../../Tap/TapElement';
-import StudyCards from '../../Cards/Stacks';
+import Stacks from '../../Cards/Stacks';
 import Footer from '../../Footer/Footer';
 import '../../Footer/Footer.css';
 import {
@@ -36,8 +36,6 @@ const Home = () => {
         fetchCategories();
     }, [token, userId]);
 
-    console.log(categories);
-
     return (
         <>
             <NavBarElement />
@@ -58,9 +56,9 @@ const Home = () => {
                     onCategorySelect={setSelectedCategory}
                 />
                 {/* Post Cards */}
-                <StudyCards
+                <Stacks
                     categories={categories}
-                    selectedCategory={selectedCategory}
+                    selectedCategory={selectedCategory || 'all'}
                 />
             </Container>
             <Footer></Footer>

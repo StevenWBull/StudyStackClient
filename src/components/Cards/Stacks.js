@@ -4,25 +4,41 @@ import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
 
 function Stacks({ categories, selectedCategory }) {
-    let filteredCategories;
+    let filteredCategories = [];
+    let stacks = [];
 
-    if (selectedCategory === 'All') {
+    if (selectedCategory === 'all') {
         filteredCategories = categories;
     } else {
         filteredCategories = categories.filter(
-            (category) => category.title === selectedCategory
+            (category) => category._id === selectedCategory
         );
     }
 
+    const combineStacks = (dataArray) => {
+        let combinedStacks = [];
+        dataArray.forEach((item) => {
+            if (item.length !== 0) {
+                combinedStacks = combinedStacks.concat(item.stacks);
+            }
+        });
+        return combinedStacks;
+    };
+
+    stacks =
+        selectedCategory === 'all'
+            ? combineStacks(filteredCategories)
+            : filteredCategories[0].stacks;
+
     return (
         <div className="row">
-            {filteredCategories.map((category) => (
-                <div key={category._id} className="col-sm-12 col-md-6">
+            {stacks.map((stack) => (
+                <div key={stack._id} className="col-sm-12 col-md-6">
                     <Card className="m-3 shadow">
                         <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>
-                                <strong>{category.title}</strong>
+                                <strong>{stack.title}</strong>
                             </Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card.
