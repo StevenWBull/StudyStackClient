@@ -5,6 +5,7 @@ This project is a React application for creating and managing stacks in order to
 ## Table of Contents
 
 - [Description](#description)
+- [Authors](#authors)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -13,6 +14,17 @@ This project is a React application for creating and managing stacks in order to
 ## Description
 
 This project is a React application that allows users to create and manage stacks. Each stack represents a topic or category, and users can add questions and answers to each stack via cards. The application provides a user-friendly interface for creating and editing stacks, as well as adding and removing questions and answers.
+
+## Authors
+
+This project was created for CSCI 441 at Fort Hays State University during the Fall 2023 semester. The original authors are as follows:
+
+- Hyojin Park
+- Preston Deschaine
+- Raymond Lee
+- Jordan Tyler
+- Reagan Mpasinya
+- Steven Bull
 
 ## Installation
 
