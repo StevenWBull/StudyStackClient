@@ -4,12 +4,17 @@ This project is a React application for creating and managing stacks in order to
 
 ## Table of Contents
 
+- [Backend](#backend)
 - [Description](#description)
 - [Authors](#authors)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Backend
+
+The backend repo for this project can be found [HERE](https://github.com/StevenWBull/StudyStackServer)
 
 ## Description
 
