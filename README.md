@@ -14,7 +14,7 @@ This project is a React application for creating and managing stacks in order to
 
 ## Backend
 
-You can find the backend repo for this project can be found [HERE](https://github.com/StevenWBull/StudyStackServer)
+The backend repo for this project can be found [HERE](https://github.com/StevenWBull/StudyStackServer)
 
 ## Description
 
