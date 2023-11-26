@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, PropTypes } from 'react';
 
 // Create a context for the theme
 export const ThemeContext = createContext();
@@ -20,6 +20,10 @@ export const ThemeProvider = ({ children }) => {
             {children}
         </ThemeContext.Provider>
     );
+};
+
+ThemeProvider.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export const useTheme = () => {
