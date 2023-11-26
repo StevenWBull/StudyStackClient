@@ -8,7 +8,6 @@ function StudyCards() {
             <div className="row">
                 <div className="col-sm-12 col-md-6">
                     <Card className="m-3 shadow">
-                        <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>
                                 <strong>Card Title</strong>
@@ -20,7 +19,6 @@ function StudyCards() {
                                 variant="outline-warning"
                                 className="start-studying-button"
                                 style={{
-                                    position: 'absolute',
                                     bottom: '10px',
                                     right: '8px',
                                     margin: '6px',
@@ -35,7 +33,6 @@ function StudyCards() {
                 {/* Add more cards in the same format */}
                 <div className="col-sm-12 col-md-6">
                     <Card className="m-3 shadow">
-                        <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>
                                 <strong>Card Title</strong>
@@ -47,7 +44,6 @@ function StudyCards() {
                                 variant="outline-warning"
                                 className="start-studying-button"
                                 style={{
-                                    position: 'absolute',
                                     bottom: '10px',
                                     right: '8px',
                                     margin: '6px',
@@ -62,7 +58,6 @@ function StudyCards() {
                 {/* Additional card 1 */}
                 <div className="col-sm-12 col-md-6">
                     <Card className="m-3 shadow">
-                        <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>
                                 <strong>Card Title</strong>
@@ -74,7 +69,6 @@ function StudyCards() {
                                 variant="outline-warning"
                                 className="start-studying-button"
                                 style={{
-                                    position: 'absolute',
                                     bottom: '10px',
                                     right: '8px',
                                     margin: '6px',
@@ -89,7 +83,6 @@ function StudyCards() {
                 {/* Additional card 2 */}
                 <div className="col-sm-12 col-md-6 mb-12">
                     <Card className="m-3 shadow">
-                        <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>
                                 <strong>Card Title</strong>
@@ -101,7 +94,6 @@ function StudyCards() {
                                 variant="outline-warning"
                                 className="start-studying-button"
                                 style={{
-                                    position: 'absolute',
                                     bottom: '10px',
                                     right: '8px',
                                     margin: '6px',

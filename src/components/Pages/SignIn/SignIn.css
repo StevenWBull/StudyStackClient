@@ -1,14 +1,5 @@
 /* SignIn.css */
 
-.signin-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f2f2f2;
-  /* Background color for the entire page */
-}
-
 .center-content {
   text-align: center;
 }
@@ -18,16 +9,6 @@
   /* Increase the max-width for a larger logo */
   margin-bottom: 10px;
   /* Increased margin for logo */
-}
-
-.signin-box {
-  background-color: #ffffff;
-  padding: 30px;
-  /* Increased padding for the sign-up box */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Added box shadow to the sign-up box */
-  padding-bottom: 0%;
 }
 
 .signin-box h1 {

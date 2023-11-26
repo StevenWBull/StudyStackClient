@@ -1,0 +1,220 @@
+/* Light Mode */
+#light {
+  background-color: #fff;
+}
+/* Dark Mode */
+#dark {
+  background-color: #333333;
+}
+
+.h1{
+  color: #000;
+}
+#light .h1{
+  color: #000;
+}
+#dark .h1{
+  color: #000;
+}
+
+.contact-text{
+  color: #000;
+}
+#light .contact-text{
+  color: #000;
+}
+#dark .contact-text{
+  color: #fff;
+}
+
+/* Container */
+.container{
+  min-height: 88vh;
+  width: 100%;
+  overflow: hidden;
+}
+#light .container{
+  background-color: #fff;
+  color: #000
+}
+#dark .container{
+  background-color: #333333;
+}
+
+.full-height-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - yellow in "Home" page */
+.header_container{
+  background-color: #ffd700;
+  width: 100%;
+  height: 20%;    
+  align-items: center;
+  border-bottom: 1px solid black;
+  min-height: 120px;
+}
+
+/* Default style for all tabs */
+.tab_container .nav-link {
+  color: #fff; /* or any other default color for light mode */
+}
+
+/* Light mode */
+#light .tab_container .nav-link {
+  color: #333333;
+}
+
+/* Dark mode */
+#dark .tab_container .nav-link {
+  color: #fff;
+}
+
+/* Nav Bar Dark Mode*/
+.navbar{
+  background-color: #fff;
+}
+#light .navbar {
+  background-color: #ffffff;
+  color: #000000; /* text color */
+}
+#dark .navbar {
+  background-color: #333333;
+  color: #ffffff; /* text color */
+}
+
+.card{
+  background-color: #ffffff;
+}
+#light .card {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Dark mode styles for cards */
+#dark .card {
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.label{
+  color: #ffffff;
+}
+
+.text-change{
+  color: #fff;
+}
+#light .text-change{
+  color: #333333;
+}
+#dark .text-change{
+  color: #fff;
+}
+
+/* Sign In Dark Mode*/
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  /* Background color for the entire page */
+}
+#light .signin-container{
+  background-color: #f2f2f2;
+}
+#dark .signin-container{
+  background-color: #333333;
+}
+
+.signin-box {
+  background-color: #ffffff;
+  padding: 30px;
+  /* Increased padding for the sign-up box */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Added box shadow to the sign-up box */
+  padding-bottom: 0%;
+}
+#light .signin-box {
+  background-color: #ffffff;
+}
+#dark .signin-box {
+  background-color: #999999;
+}
+
+.signin-box h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+}
+#light .form-group label {
+  color: #000;
+}
+#dark .form-group label {
+  color: #fff;
+}
+
+/*Register Dark Mode*/
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+#light .register-container{
+  background-color: #f2f2f2;
+}
+#dark .register-container{
+  background-color: #333333;
+}
+
+.register-box {
+  background-color: #ffffff;
+  padding: 30px;
+  /* Increased padding for the register box */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Added box shadow to the register box */
+}
+#light .register-box {
+  background-color: #ffffff;
+}
+#dark .register-box {
+  background-color: #808080;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+  /* Text color for labels */
+}
+#light .form-group label {
+  color: #000;
+}
+#dark .form-group label {
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #282c34;
+  padding: 5px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  margin-top: auto;
+}

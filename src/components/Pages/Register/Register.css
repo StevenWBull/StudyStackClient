@@ -1,14 +1,4 @@
 /* Register.css */
-
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f2f2f2;
-  /* Background color for the entire page */
-}
-
 .center-content {
   text-align: center;
   /* display: flex;
@@ -22,15 +12,6 @@
   /* Increase the max-width for a larger logo */
   margin-bottom: 5px;
   /* Increased margin for logo */
-}
-
-.register-box {
-  background-color: #ffffff;
-  padding: 30px;
-  /* Increased padding for the register box */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Added box shadow to the register box */
 }
 
 .register-box h1 {
@@ -52,14 +33,6 @@
 .form-group {
   margin-bottom: 22px;
   text-align: left;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #000;
-  /* Text color for labels */
 }
 
 .form-group input {

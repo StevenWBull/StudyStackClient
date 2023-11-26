@@ -14,7 +14,7 @@ const data = [
         caption: 'StudyStack',
         description: 'Your bridge to brilliant',
         page: '/home',
-        buttonName: 'More info',
+        buttonName: 'More Info',
         textColor: '1',
     },
     {
@@ -23,7 +23,7 @@ const data = [
         caption: 'Make the most of your educational life',
         description: 'Good to see you again',
         page: '/sign-in',
-        buttonName: 'Sign in',
+        buttonName: 'Sign In',
         textColor: '2',
     },
     {
@@ -32,7 +32,7 @@ const data = [
         caption: 'Get started with a free account',
         description: 'Create your account',
         page: '/register',
-        buttonName: 'register now',
+        buttonName: 'Register Now',
         textColor: '3',
     },
 ];

@@ -1,3 +1,5 @@
+import React, { useContext, useState } from 'react';
+import '../App/App.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,10 +9,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../Images/homeLogo.png';
 import { useAuth } from '../../AuthContext';
+import ReactSwitch from 'react-switch';
 
 const NavBarElement = () => {
     const { currentUser, logout } = useAuth();
-    const username = currentUser.email.split('@')[0]; //username
+    const username = currentUser.email.split('@')[0]; // Username
+
+    // Use the ThemeContext to access the theme and its setter
+    const [theme, setTheme] = useState('dark');
+
+    // Function to toggle between light and dark themes
+    const toggleTheme = () => {
+        setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+    };
+
     return (
         <>
             {['lg'].map((expand) => (
@@ -28,7 +40,6 @@ const NavBarElement = () => {
                                 height="40x"
                                 className="d-inline-block align-bottom"
                             />
-                            {/* &nbsp; is a HTML space */}
                             &nbsp; StudyStack
                         </Navbar.Brand>
                         <Navbar.Toggle
@@ -67,26 +78,22 @@ const NavBarElement = () => {
                                             My Profile
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action6">
-                                            Dark Mode
+                                            <div>
+                                                <label>
+                                                    {' '}
+                                                    {theme === 'light'
+                                                        ? 'Light Mode'
+                                                        : 'Dark Mode'}{' '}
+                                                </label>
+                                                <ReactSwitch
+                                                    onChange={toggleTheme}
+                                                    checked={theme === 'dark'}
+                                                />
+                                            </div>
                                         </NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item onClick={logout}>
                                             Log Out
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <NavDropdown
-                                        title="Studies"
-                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
-                                    >
-                                        <NavDropdown.Item href="#action1">
-                                            study1
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action2">
-                                            study2
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="/create">
-                                            Add study
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/contact-us">

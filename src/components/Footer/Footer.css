@@ -1,13 +1,3 @@
-.App-footer {
-    text-align: center;
-    background-color: #282c34;
-    padding: 5px;
-    color: white;
-    position: fixed;
-    width: 100%;
-    margin-top: auto;
-}
-
 @media (max-width: 767px) {
     .App-footer {
         position: static; /* Set the position to static (normal flow) */

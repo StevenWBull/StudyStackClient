@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../App/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './MyProfile.css'; // Import the CSS file
@@ -80,7 +81,7 @@ const MyProfile = () => {
                         <Col md={6}>
                             <Card className="second-container second-column-shadow height-100">
                                 <Card.Body>
-                                    <h1>Account Information</h1>
+                                    <h1 className="h1">Account Information</h1>
                                     <form className="center-form">
                                         <div className="form-group">
                                             <label htmlFor="firstName">
