@@ -1,13 +1,17 @@
 // categoryService.js
 
 import axios from 'axios';
-import { useAuth } from './AuthContext';
+import { useAuth } from '../AuthContext';
 
 const API_URL = `${process.env.REACT_APP_API_ENDPOINT}/categories`;
 
-const getCategoryList = async () => {
+const GetCategoryList = async (token, userId) => {
     try {
-        const response = await axios.get(API_URL);
+        const response = await axios.get(`${API_URL}/${userId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
         return response.data;
     } catch (error) {
         console.error('Failed to fetch category list:', error);
@@ -80,7 +84,7 @@ const DeleteCategory = async (categoryId) => {
 };
 
 export default {
-    getCategoryList,
+    GetCategoryList,
     CreateCategory,
     UpdateCategory,
     DeleteCategory,

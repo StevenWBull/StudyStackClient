@@ -13,7 +13,7 @@ import ReactSwitch from 'react-switch';
 
 const NavBarElement = () => {
     const { currentUser, logout } = useAuth();
-    const username = currentUser.email.split('@')[0]; // Username
+    const username = currentUser.email.split('@')[0]; //username
 
     // Use the ThemeContext to access the theme and its setter
     const [theme, setTheme] = useState('dark');
@@ -22,7 +22,6 @@ const NavBarElement = () => {
     const toggleTheme = () => {
         setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
     };
-
     return (
         <>
             {['lg'].map((expand) => (
@@ -71,7 +70,7 @@ const NavBarElement = () => {
                                         </Button>
                                     </Form>
                                     <NavDropdown
-                                        title={`Welcome! ${username}`}
+                                        title={`Welcome ${username}!`}
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
                                         <NavDropdown.Item href="/my-profile">

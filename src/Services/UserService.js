@@ -27,13 +27,8 @@ const postLogout = async () => {
     // If you add such logic, remember to handle it here.
 };
 
-const getCurrentUser = () => {
-    return JSON.parse(localStorage.getItem('currentUser'));
-};
-
 export default {
     postLogin,
     postRegister,
     postLogout,
-    getCurrentUser,
 };
