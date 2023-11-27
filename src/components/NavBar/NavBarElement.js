@@ -95,6 +95,22 @@ const NavBarElement = () => {
                                             Log Out
                                         </NavDropdown.Item>
                                     </NavDropdown>
+                                    <NavDropdown
+                                        title="Studies"
+                                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                    >
+                                        <NavDropdown.Item href="#action1">
+                                            study1
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item href="#action2">
+                                            study2
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="/create">
+                                            Add study
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
+                                    <Nav.Link href="/contact-us"></Nav.Link>
                                     <Nav.Link href="/contact-us">
                                         Contact Us
                                     </Nav.Link>
