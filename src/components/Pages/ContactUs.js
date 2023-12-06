@@ -1,9 +1,6 @@
 import React from 'react';
+import '../App/App.css';
 import NavBarElement from '../NavBar/NavBarElement';
-import {
-    HeaderContainer,
-    Container,
-} from '../Styles/Container/Container.style';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -12,13 +9,14 @@ const ContactUs = () => {
     return (
         <>
             <NavBarElement />
-            <Container>
-                <HeaderContainer className="text-light d-flex justify-content-center">
-                    <h1>Contact Us</h1>
-                </HeaderContainer>
+            <div className="container">
+                <div className="text-light d-flex justify-content-center mt-3">
+                    <h1 className="contact-text">Contact Us</h1>
+                </div>
                 <Form className="w-50 mx-auto">
                     <Form.Select
-                        className="mb-4 mt-4"
+                        className="mb-4 mt-4
+                        "
                         aria-label="Default select example"
                     >
                         <option>Search Your Issue</option>
@@ -49,7 +47,7 @@ const ContactUs = () => {
                         />
                     </FloatingLabel>
                     <Form.Group controlId="formFile" className="mb-3">
-                        <Form.Label>
+                        <Form.Label className="contact-text">
                             Please provide a screenshot of the issue.
                         </Form.Label>
                         <Form.Control type="file" />
@@ -58,7 +56,7 @@ const ContactUs = () => {
                         Submit
                     </Button>
                 </Form>
-            </Container>
+            </div>
         </>
     );
 };

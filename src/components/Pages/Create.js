@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App/App.css';
 import NavBarElement from '../NavBar/NavBarElement';
 import {
     HeaderContainer,
@@ -54,7 +55,7 @@ const Create = () => {
     return (
         <>
             <NavBarElement />
-            <Container>
+            <div className="container">
                 <HeaderContainer></HeaderContainer>
                 <StudyContainer>
                     <h4>Create a New Study Stack</h4>
@@ -151,7 +152,7 @@ const Create = () => {
                         </Button>
                     </Form>
                 </StudyContainer>
-            </Container>
+            </div>
         </>
     );
 };

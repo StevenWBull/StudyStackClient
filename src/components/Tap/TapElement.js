@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import PropTypes from 'prop-types';
 
 function TapElement({ categories, onCategorySelect }) {
     if (!categories) {
-        categories = []; // Initialize categories as an empty array if it's undefined
+        categories = [];
     }
 
     return (

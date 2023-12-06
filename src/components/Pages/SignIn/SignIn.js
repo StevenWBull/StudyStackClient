@@ -1,5 +1,6 @@
 // SignIn.js
 import React, { useContext } from 'react';
+import '../../App/App.css';
 import './SignIn.css'; // Import the CSS file
 import studyStackLogo from '../../Images/Study_Stack_Full_Color.png';
 import Alert from 'react-bootstrap/Alert';
@@ -68,7 +69,7 @@ const SignIn = () => {
                             <button type="submit">Sign In</button>
                         </form>
                         {['alert-light'].map((variant) => (
-                            <Alert key={variant} variant={variant}>
+                            <Alert className="" key={variant} variant={variant}>
                                 Need an account?{' '}
                                 <Alert.Link href="/register">
                                     Register
