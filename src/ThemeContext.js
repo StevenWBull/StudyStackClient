@@ -3,6 +3,14 @@ import React, { createContext, useState, useContext, PropTypes } from 'react';
 // Create a context for the theme
 export const ThemeContext = createContext();
 
+export const useTheme = () => {
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
+};
+
 export const ThemeProvider = ({ children }) => {
     // Define the theme state and a function to toggle the theme
     const [theme, setTheme] = useState('light');
@@ -24,12 +32,4 @@ export const ThemeProvider = ({ children }) => {
 
 ThemeProvider.propTypes = {
     children: PropTypes.node.isRequired,
-};
-
-export const useTheme = () => {
-    const context = useContext(ThemeContext);
-    if (!context) {
-        throw new Error('useTheme must be used within a ThemeProvider');
-    }
-    return context;
 };

@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RequireAuth from '../Auth/RequireAuth';
 import RedirectIfAuthenticated from '../Auth/RedirectIfAuthenticated';
 import ReactSwitch from 'react-switch';
-export const ThemeContext = createContext(null);
+import { ThemeProvider } from '../../ThemeContext';
 import FlashCardPage from '../Pages/FlashCards/FlashCardPage';
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
     };
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeProvider>
             <div className="App" id={theme}>
                 <AuthProvider>
                     <Router>
@@ -90,7 +90,7 @@ const App = () => {
                     />
                 </div>
             </div>
-        </ThemeContext.Provider>
+        </ThemeProvider>
     );
 };
 

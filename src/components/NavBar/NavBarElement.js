@@ -9,19 +9,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../Images/homeLogo.png';
 import { useAuth } from '../../AuthContext';
+import { useTheme } from '../../ThemeContext';
 import ReactSwitch from 'react-switch';
 
 const NavBarElement = () => {
     const { currentUser, logout } = useAuth();
+    const { toggleTheme } = useTheme();
     const username = currentUser.email.split('@')[0]; //username
 
     // Use the ThemeContext to access the theme and its setter
     const [theme, setTheme] = useState('dark');
 
-    // Function to toggle between light and dark themes
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
-    };
     return (
         <>
             {['lg'].map((expand) => (
