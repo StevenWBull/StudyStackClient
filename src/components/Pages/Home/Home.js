@@ -16,6 +16,8 @@ import Logo from '../../Images/Study_Stack_Black.png';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [loading, setLoading] = useState(true);
     const { getUserData, currentUser } = useAuth();
     const token = currentUser.token;
     const userId = getUserData().id;
@@ -23,7 +25,6 @@ const Home = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                console.log('Fetching categories...');
                 const categoryData = await CategoryService.GetCategoryList(
                     token,
                     userId
