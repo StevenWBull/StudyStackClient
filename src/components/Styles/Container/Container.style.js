@@ -1,5 +1,21 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+    background-color: white;
+    min-height: 88vh;
+    overflow: hidden;
+`;
+
+//header-yellow in main page
+export const HeaderContainer = styled.div`
+    background-color: #ffd700;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    border-bottom: 1px solid black;
+    min-height: 120px;
+`;
+
 //carousel container
 export const CarouselElement = styled.div`
     background-image: url(${(props) => props.img});
