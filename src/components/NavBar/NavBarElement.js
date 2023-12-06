@@ -79,7 +79,7 @@ const NavBarElement = () => {
                                         title="Studies"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <NavDropdown.Item href="#action1">
+                                        <NavDropdown.Item href="/flashcard">
                                             study1
                                         </NavDropdown.Item>
                                         <NavDropdown.Item href="#action2">

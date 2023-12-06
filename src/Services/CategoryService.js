@@ -7,9 +7,12 @@ const API_URL = `${process.env.REACT_APP_API_ENDPOINT}/categories`;
 
 const GetCategoryList = async (token, userId) => {
     try {
-        const response = await axios.get(`${API_URL}/${userId}`, {
+        const response = await axios.get(`${API_URL}?userID=${userId}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
+            },
+            body: {
+                userID: userId,
             },
         });
         return response.data;
