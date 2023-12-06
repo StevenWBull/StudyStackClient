@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
-function TapElement({ categories }) {
-    // Initialize categories as an empty array if it's undefined
+function TapElement({ categories, onCategorySelect }) {
     if (!categories) {
         categories = [];
     }
 
     return (
         <Tabs
-            defaultActiveKey="profile"
-            id="uncontrolled-tab-example"
-            className="mb-3 tab_container"
+            defaultActiveKey="all"
+            id="category-tabs"
+            className="mb-3"
+            onSelect={onCategorySelect}
         >
-            <Tab className="tab_container" eventKey="all" title="All">
+            <Tab eventKey="all" title="All">
                 Click on the desired category tab to view cards corresponding to
-                that category. Currently no registered categories.
+                that category.
             </Tab>
             {categories.map((category) => (
                 <Tab
@@ -34,6 +34,7 @@ function TapElement({ categories }) {
 
 TapElement.propTypes = {
     categories: PropTypes.array.isRequired, // categories should be an array
+    onCategorySelect: PropTypes.func.isRequired, // Add prop validation for category selection
 };
 
 export default TapElement;

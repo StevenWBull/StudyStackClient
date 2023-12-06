@@ -7,6 +7,7 @@ import {
     StudyContainer,
 } from '../Styles/Container/Container.style';
 import { Form, Button, InputGroup } from 'react-bootstrap';
+import FlashCard from './FlashCards/FlashCard';
 import { FaPlus, FaTrash } from 'react-icons/fa';
 
 const Create = () => {

@@ -22,6 +22,8 @@ export const StudyContainer = styled.div`
     text-align: left;
 `;
 
-export const HeaderContainer = styled.div`
+export const FlashCardContainer = styled.div`
     background-color: #f2f2f2;
+    min-height: 800px;
+    padding-top: 12%;
 `;

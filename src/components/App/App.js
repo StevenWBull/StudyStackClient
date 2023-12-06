@@ -13,8 +13,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RequireAuth from '../Auth/RequireAuth';
 import RedirectIfAuthenticated from '../Auth/RedirectIfAuthenticated';
 import ReactSwitch from 'react-switch';
-
 export const ThemeContext = createContext(null);
+import FlashCardPage from '../Pages/FlashCards/FlashCardPage';
 
 const App = () => {
     const [theme, setTheme] = useState('light');
@@ -69,6 +69,14 @@ const App = () => {
                                 element={
                                     <RequireAuth>
                                         <MyProfile />
+                                    </RequireAuth>
+                                }
+                            />
+                            <Route
+                                path="/flashcard"
+                                element={
+                                    <RequireAuth>
+                                        <FlashCardPage />
                                     </RequireAuth>
                                 }
                             />
