@@ -10,6 +10,7 @@ import Create from '../Pages/Create';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RequireAuth from '../Auth/RequireAuth';
 import RedirectIfAuthenticated from '../Auth/RedirectIfAuthenticated';
+import FlashCardPage from '../Pages/FlashCards/FlashCardPage';
 
 const App = () => {
     return (
@@ -59,6 +60,14 @@ const App = () => {
                         element={
                             <RequireAuth>
                                 <MyProfile />
+                            </RequireAuth>
+                        }
+                    />
+                    <Route
+                        path="/flashcard"
+                        element={
+                            <RequireAuth>
+                                <FlashCardPage />
                             </RequireAuth>
                         }
                     />
