@@ -1,5 +1,11 @@
 # StudyStackApp
 
+IMPORTANT: ALL FILES IN THIS REPOSITORY WERE EQUALLY WRITTEN, TESTED, AND DEBUGGED BY THE FRONT END TEAM LISTED BELOW:
+
+- Hyojin Park
+- Preston Deschaine
+- Steven Bull
+
 This project is a React application for creating and managing stacks in order to help users better learn and retain information.
 
 ## Table of Contents
